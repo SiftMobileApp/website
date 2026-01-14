@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import siftLogo from "@/assets/sift-logo.png";
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-primary-foreground mb-4">Sift</h3>
+              <img src={siftLogo} alt="Sift Logo" className="h-12 w-12 rounded-xl mb-4" />
               <p className="text-primary-foreground/60 max-w-sm mb-6">
                 The video-first marketplace for second-hand fashion. Discover, trust, and buy pre-loved pieces with confidence.
               </p>

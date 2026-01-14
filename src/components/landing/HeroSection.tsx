@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-thrifting.jpg";
+import siftLogo from "@/assets/sift-logo.png";
 
 const HeroSection = () => {
   return (
@@ -25,9 +26,11 @@ const HeroSection = () => {
               transition={{ delay: 0.1 }}
               className="mb-8"
             >
-              <span className="text-4xl font-bold text-primary-foreground tracking-tight">
-                Sift
-              </span>
+              <img 
+                src={siftLogo} 
+                alt="Sift Logo" 
+                className="h-14 w-14 rounded-xl"
+              />
             </motion.div>
 
             {/* Headline */}
