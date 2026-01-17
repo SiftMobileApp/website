@@ -62,58 +62,54 @@ const HowItWorksSection = () => {
           </p>
         </motion.div>
 
-        {/* Steps - Alternating Layout */}
-        <div className="max-w-6xl mx-auto space-y-16 lg:space-y-24">
+        {/* Steps - Side by Side Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: index * 0.1 }}
-              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
+              transition={{ duration: 0.7, delay: index * 0.15 }}
+              className="flex flex-col group"
             >
               {/* Image */}
-              <div className="flex-1 w-full">
-                <div className="relative group">
-                  {/* Floating number */}
-                  <span className="absolute -top-6 -left-4 lg:-left-8 text-7xl lg:text-8xl font-black text-primary/10 select-none z-10">
-                    {step.number}
-                  </span>
-                  
-                  {/* Image container */}
-                  <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                    <img 
-                      src={step.image} 
-                      alt={step.title}
-                      className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  
-                  {/* Decorative accent */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-2xl -z-10" />
+              <div className="relative mb-6">
+                {/* Floating number */}
+                <span className="absolute -top-4 -left-2 text-6xl lg:text-7xl font-black text-primary/10 select-none z-10">
+                  {step.number}
+                </span>
+                
+                {/* Image container */}
+                <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                 </div>
+                
+                {/* Decorative accent */}
+                <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-primary/20 rounded-xl -z-10" />
               </div>
 
               {/* Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <div className="inline-flex items-center gap-3 mb-4">
-                  <div className="bg-primary h-12 w-12 rounded-xl flex items-center justify-center shadow-lg">
-                    <step.icon className="h-6 w-6 text-white" />
+              <div className="text-center">
+                <div className="inline-flex items-center gap-3 mb-3">
+                  <div className="bg-primary h-10 w-10 rounded-lg flex items-center justify-center shadow-lg">
+                    <step.icon className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-primary uppercase tracking-wider">
                     Step {step.number}
                   </span>
                 </div>
                 
-                <h3 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3">
                   {step.title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
+                <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>
