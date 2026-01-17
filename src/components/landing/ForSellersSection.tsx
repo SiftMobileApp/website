@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Camera, TrendingUp, Users, Heart } from "lucide-react";
-import sellerImage from "@/assets/seller-filming.jpg";
+import sellerImage from "@/assets/Seller.jpg";
 
 const benefits = [
   {
