@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Search, Video, ShoppingBag } from "lucide-react";
-import discoverImage from "@/assets/discover-scroll.jpg";
-import seeFitImage from "@/assets/see-fit.jpg";
-import buyInstantImage from "@/assets/buy-instant.jpg";
+import discoverImage from "@/assets/Scrolling.jpg";
+import seeFitImage from "@/assets/Fit.jpg";
+import buyInstantImage from "@/assets/Buy.jpg";
 
 const steps = [
   {
