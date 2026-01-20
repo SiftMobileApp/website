@@ -15,7 +15,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="join-waitlist" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1)_0%,transparent_50%)]" />
