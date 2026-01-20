@@ -74,26 +74,6 @@ const HeroSection = () => {
                 </a>
               </Button>
             </motion.div>
-
-            {/* Social Proof */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-12 flex items-center gap-6 justify-center lg:justify-start"
-            >
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="h-10 w-10 rounded-full bg-primary-foreground/20 border-2 border-primary-foreground/30 backdrop-blur-sm"
-                  />
-                ))}
-              </div>
-              <p className="text-sm text-primary-foreground/70">
-                <span className="font-semibold text-primary-foreground">2,500+</span> people on the waitlist
-              </p>
-            </motion.div>
           </motion.div>
 
           {/* Right Image */}
