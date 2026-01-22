@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import siftLogo from "@/assets/sift-logo.png";
 
 const Footer = () => {

@@ -70,7 +70,7 @@ const HeroSection = () => {
               <Button variant="ghost" size="lg" className="text-primary-foreground/90 hover:text-primary-foreground hover:bg-primary-foreground/10" asChild>
                 <a href="#how-it-works">
                   <Play className="mr-2 h-5 w-5" />
-                  Watch How It Works
+                  See How It Works
                 </a>
               </Button>
             </motion.div>
