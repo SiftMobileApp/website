@@ -30,7 +30,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-24 lg:py-32 bg-background relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -39,6 +39,7 @@ const HowItWorksSection = () => {
 
       <div className="container relative z-10">
         {/* Section Header */}
+        <div id="how-it-works" className="pb-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -111,7 +111,13 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto; /* Disable native smooth scroll, using custom JS implementation */
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-padding-top: 80px;
+    }
   }
 
   :target {
